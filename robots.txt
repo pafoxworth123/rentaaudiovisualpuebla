@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rentaaudiovisualpuebla.com/sitemap.xml
