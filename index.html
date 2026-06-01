@@ -100,6 +100,7 @@
             color: white;
         }
 
+        /* Hero section with brighter background */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -109,20 +110,34 @@
             color: white;
             padding: 6rem 1.5rem;
             margin-top: 0;
+            position: relative;
+        }
+        /* Brighter overlay - using a lighter gradient with less darkening */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
+            z-index: 1;
         }
         .hero-content {
+            position: relative;
+            z-index: 2;
             max-width: 850px;
         }
         .hero h1 {
             font-size: 3.3rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
         .hero p {
             font-size: 1.35rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
         }
         .btn-whatsapp {
             background-color: #25D366;
@@ -337,8 +352,8 @@
     </div>
 </nav>
 
-<!-- Hero Background -->
-<section id="inicio" class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.75)), url('images/4mx5m_pantalla.jpeg') center center/cover no-repeat;">
+<!-- Hero Background with brighter overlay (40% opacity instead of 68%) -->
+<section id="inicio" class="hero" style="background: url('images/4mx5m_pantalla.jpeg') center center/cover no-repeat;">
     <div class="hero-content">
         <h1>Equipo Audiovisual Profesional<br>en Puebla</h1>
         <p>Sonido de alta calidad, pantallas LED, iluminación y asesoría técnica para conferencias, convenciones y eventos corporativos.</p>
